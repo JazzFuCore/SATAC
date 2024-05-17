@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+	<script>
+	var xhr = new XMLHttpRequest();
+    xhr.open("GET", "Lic.txt", false);
+    xhr.send();
+
+    // Verifica se a solicitação foi bem-sucedida
+    if (xhr.status === 200) {
+        // Divide a resposta do arquivo em linhas
+        var lines = xhr.responseText.split("\r\n");
+
+        if (lines.length >= 1) {
+            if ('1' == lines[0]){
+				window.location.href = '/ficheiros/index.html';
+            }
+		}
+    }
+	</script>
+    <style>
+        footer {
+            padding: 10px;
+            position: fixed;
+            bottom: 33px;
+            width: 100%;
+        }
+		h1 {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+<center>
+<h1>
+<a href="/ficheiros/index.html">--- ir ---></a>
+</h1>
+</center>
+</body>
+<footer>
+<center>
+Ao utilizar este trabalho o utilizador concorda com a <a href="/oos/lic.html">licença</a>.
+<br>
+By using this work, you agree to the <a href="/oos/lic.html">license</a>.
+</center>
+</footer>
+</html>

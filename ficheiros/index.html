@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/img/icon.png" type="image/png" />
+    <title>FICHEIROS</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /*    ###   --- carregamento das fontes ---   ###    */
+      /*    ###   --- carregamento das fontes ---   ###    */
+      /*    ###   --- carregamento das fontes ---   ###    */
+
+      @font-face {
+        font-family: "myfont";
+        src: url("/fonts/PTSans-Regular.ttf");
+      }
+
+      .use_font {
+        font-family: myfont;
+        text-align: justify;
+      }
+
+      @font-face {
+        font-family: "myfont-bold";
+        src: url("/fonts/PTSans-Bold.ttf");
+        font-weight: bold;
+      }
+
+      .use_font_bold {
+        font-family: myfont-bold;
+      }
+
+      /*    ###   --- definição do body ---   ###    */
+      /*    ###   --- definição do body ---   ###    */
+      /*    ###   --- definição do body ---   ###    */
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #cafe, #fff 1.3%);
+        height: 100vh;
+        background-repeat: no-repeat;
+      }
+
+      .content {
+        color: #2c2c2c;
+        padding-right: 3vh;
+        padding-left: 3vh;
+        padding-top: 9vw;
+      }
+
+      /*    ###   --- barra menu superior ---   ###    */
+      /*    ###   --- barra menu superior ---   ###    */
+      /*    ###   --- barra menu superior ---   ###    */
+
+      .menu-bar-op {
+        font-family: myfont-bold;
+        position: fixed;
+        background-color: #00000000;
+        width: 100%;
+      }
+
+      .menu-bar-op-items ul li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+
+      .menu-bar-op-items ul li ul,
+      #buttonGrid {
+        position: absolute;
+        top: 13px;
+        left: 0;
+        background-color: #cd79799b;
+        display: none;
+      }
+
+      .menu-bar {
+        font-family: myfont-bold;
+        position: fixed;
+        background-color: rgba(250, 235, 215, 0.637);
+        padding: 6px 0px;
+        width: 100%;
+      }
+
+      .menu-items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      .menu-items td,
+      .menu-items p {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      .menu-items td p a {
+        border-style: groove;
+        border-color: aqua black gold aquamarine;
+        background-color: #efefef;
+        color: #000000;
+        text-decoration: none;
+        padding: 10px;
+        transition: background-color 0.3s;
+        border-radius: 6%;
+      }
+
+      .menu-items td p a:hover {
+        background-color: #c3c3c3;
+      }
+
+      /*    ###   --- botão topo ---   ###    */
+      /*    ###   --- botão topo ---   ###    */
+      /*    ###   --- botão topo ---   ###    */
+
+      #btnVoltarTopo {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      #btnVoltarTopo:hover {
+        background-color: #0056b3;
+      }
+	  
+	  
+	  
+		.button_bar {
+			display: inline-block;
+			padding: 3px 13px;
+			font-size: 14px;
+			text-align: center;
+			text-decoration: none;
+			border: 2px solid mediumaquamarine;
+			border-radius: 5px;
+			color: #333;
+			background-color: #f9f9f9;
+			cursor: pointer;
+			transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+		}
+
+		.button_bar:hover {
+			background-color: #eaeaea;
+		}
+
+		.button_bar:active {
+			background-color: #ddd;
+			border-color: #999;
+			color: #222;
+		}
+		
+		
+				
+		
+		#imagem-sobreposta {
+			position: absolute;
+			top: 1px;
+			left: 6px;
+			z-index: 9999;
+			pointer-events: none;
+		}
+
+		#imagem-sobreposta img {
+			width: 128px;
+			height: auto;
+		}
+		
+		
+		
+		.button_dir {
+			color: rgb(245, 215, 173);
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+		
+		.button_dir:hover{
+			color:  rgb(240, 196, 136);
+		}
+		
+		
+		
+		footer {
+			color: #999;
+		}
+
+		footer img {
+			height: 1em;
+		}
+		footer a {
+			color: #999;
+			transition: color 0.3s;
+		}
+
+		footer a:hover {
+			color: blue;
+		}
+    </style>
+  </head>
+
+  <body>
+    <div id="cookie"></div>
+    <top>
+      <center>
+        <div class="menu-bar">
+				<div id="imagem-sobreposta">
+					<img src="/img/satac.png">
+				</div>
+          <table class="menu-items">
+            <tr>
+			  <td>
+			  	<p><button class="button_bar" onclick="window.location.href='/pesquisar/index.php'">PESQUISAR</button></p>
+			  </td>
+              <td>
+                <p><a href="/alarmes/index.php">ALARMES</a></p>
+              </td>
+              <td>
+                <p><a href="/contadores/index.php">CONTADORES</a></p>
+              </td>
+              <td>
+                <p><a href="/ficheiros/index.html">FICHEIROS</a></p>
+              </td>
+            </tr>
+          </table>
+		  <a href="/oos/lic.html" class="button_dir">License</a>
+        </div>
+      </center>
+    </top>
+    <div class="content use_font">
+      <div class="container">
+        <h1>Plum - inserir Medições</h1>
+        <form
+          action="Plum - inserir Medicoes.php"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <label for="file">Choose File:</label>
+          <input type="file" name="file" id="file" required />
+          <button class="bP" type="submit" name="submit">Upload</button>
+        </form>
+      </div>
+      <br />
+      <div class="container">
+        <h1>Temetra - inserir Medições</h1>
+        <form action="Temetra - inserir Medicoes.php" method="post">
+          <div class="form-group">
+            <button class="bT" type="submit" name="executar_python">
+              Executar Programa Python
+            </button>
+          </div>
+        </form>
+      </div>
+      <hr />
+      <div class="container">
+        <h1>Plum - inserir Contadores</h1>
+        <form
+          action="Plum - inserir Contadores.php"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <label for="file">Choose File:</label>
+          <input type="file" name="file" id="file" required />
+          <button class="bP" type="submit" name="submit">Upload</button>
+        </form>
+      </div>
+      <br />
+      <div class="container">
+        <h1>Temetra - inserir Contadores</h1>
+        <form action="Temetra - inserir Contadores.php" method="post">
+          <div class="form-group">
+            <button class="bT" type="submit" name="executar_python">
+              Executar Programa Python
+            </button>
+          </div>
+        </form>
+      </div>
+      <br />
+    </div>
+
+    <!-- Botão Voltar ao Topo -->
+    <button onclick="voltarAoTopo()" id="btnVoltarTopo" title="Voltar ao Topo">
+      Topo
+    </button>
+
+    <script>
+      // Função para mostrar ou esconder o botão conforme o usuário rola a página
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("btnVoltarTopo").style.display = "block";
+        } else {
+          document.getElementById("btnVoltarTopo").style.display = "none";
+        }
+      }
+
+      function voltarAoTopo() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+<footer style="font-family: myfont; padding: 6px 6vh;">
+	<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/JazzFuCore/SATAC">SATAC</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/JazzFuCore">Frederico Jorge Café</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-ShareAlike 4.0 International<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" onerror="this.src='/img/cc.svg';" alt=""><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" onerror="this.src='/img/by.svg';" alt=""><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" onerror="this.src='/img/sa.svg';" alt=""></a></p>
+</footer>
+</html>

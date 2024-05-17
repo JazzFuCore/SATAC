@@ -1,0 +1,10 @@
+0
+
+
+In order to accept the license, the first line must contain the number "1".
+
+Para aceitar a licença, a primeira linha deve conter o número "1".
+
+
+
+SATAC © 2024 by Frederico Jorge Café is licensed under CC BY-SA 4.0 
